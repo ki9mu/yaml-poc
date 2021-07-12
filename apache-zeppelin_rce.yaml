@@ -1,0 +1,47 @@
+verify:
+  - request:
+      data: None
+      header:
+        Content-Type: application/xml
+      method: GET
+      path: /app/notebook/notebook.html
+    response:
+      content_list:
+        - 'Settings'
+        - '{{item.name}}'
+      content_re: None
+      header: None
+      status_code: '200'
+
+dir_list:
+- /
+- /zeppelin
+
+attack:
+  - request:
+      path: /api/security/ticket
+      data: None
+      header: None
+      method: GET
+    response:
+      content_list:
+        - status
+        - OK
+        - principal
+        - anonymous
+      content_re: None
+      header: Content-Type
+      status_code: '200'
+
+info:
+  app_name: Apache Zeppelin
+  app_name_english: Apache Zeppelin
+  author: ki9mu
+  cve:
+  cvnd:
+  fofa_dork: icon_hash="960250052"
+  shodan_dork: None
+  version: '1.0'
+  vul_name: Apache Zeppelin 未授权任意命令执行漏洞
+  vul_type: 远程命令执行
+  vul_type_english: rce

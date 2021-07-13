@@ -30,7 +30,8 @@ attack:
         - principal
         - anonymous
       content_re: None
-      header: Content-Type
+      header: 
+        - Content-Type
       status_code: '200'
 
 info:

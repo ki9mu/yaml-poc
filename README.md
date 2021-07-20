@@ -9,7 +9,6 @@
   <a href="https://github.com/ki9mu/yaml-poc/discussions">反馈 bug</a>
   ·
   <a href="https://www.yuque.com/ki9mu/vg5lgk">教程 文档</a>
-  ·
 </p>
 
 
